@@ -49,7 +49,7 @@ Download the following data files from the [Data_Sources](https://github.com/Zhe
 - **orders.csv**	 - Order items information
 
 
-**1.ETL processing**
+**1.ETL Processing (11 points)**
 
 Use PDI to create a star schema and store the tables (fact and dimension tables) in PostgreSQL.
 
@@ -96,9 +96,9 @@ Use Pentaho Schema Workbench to generate an OLAP cube based on the star schema c
 
 **Requirments:** The cube name is *Order_Cube*. Please create 5 dimension usages for the five dimension tables. You need to reate some hierarchies (e.g., year-month-day) on each dimension.
 
-**3. OLAP Analysis and Results Reporting**
+**3. OLAP Analysis and Results Reporting (4 points)**
 
-Use the Saiku Analytics tool to analyze *"the total dollars sold per year per parent_category"* using the OLAP cube created in the previous step. Create a report to visualize the results with charts (e.g., line chart, pie chart, and bar chart **(4 points)**
+Use the Saiku Analytics tool to analyze *"the total dollars sold per year per parent_category"* using the OLAP cube created in the previous step. Create a report to visualize the results with charts (e.g., line chart, pie chart, and bar chart).
 
 
 
