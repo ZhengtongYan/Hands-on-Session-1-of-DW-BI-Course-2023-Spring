@@ -13,7 +13,7 @@ Gain hands-on experience in building a DW&BI project using PostgreSQL and Pentah
 
 
 ## **Software Requirements**
-**1. Install PostgreSQL database**
+**1. PostgreSQL database**
 
 * [Install PostgreSQL on Windows](https://www.postgresqltutorial.com/install-postgresql/) 
 
@@ -22,7 +22,7 @@ Gain hands-on experience in building a DW&BI project using PostgreSQL and Pentah
 * [Install PostgreSQL on MacOS](https://www.postgresqltutorial.com/install-postgresql-macos/) 
 
 
-**2. Install the community edition of Pentaho**
+**2. Pentaho**
 - 2.1 Pentaho Server
 - 2.2 Pentaho Data Integration (PDI)
 - 2.3 Pentaho Schema Workbench (PSW)
