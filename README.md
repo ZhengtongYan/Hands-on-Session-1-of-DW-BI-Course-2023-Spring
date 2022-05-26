@@ -58,8 +58,7 @@ The star schema includes:
  - five dimension tables (*customer_dim, date_dim, product_dim, salesrep_dim, promotion_dim*)
  - two measures (*dollars_sold, amount_sold*)
 
-Requirments in the date_dim table:
-Please embellish the Date Dimension with the following date attributes:
+In the date_dim table, please embellish the date dimension with the following date attributes:
 - *sales_year*: Year of date 
 - *sales_quarter*: Quarter of date
 - *sales_month*: Month of date
@@ -69,18 +68,18 @@ Please embellish the Date Dimension with the following date attributes:
 - *sales_week_of_year*: Week of year of date 
 
 
-(1) Create five individual transformation for each table **(6 points)**.
+(1) Create 6 individual transformation file for each table in the star schema. **(6 points)**.
 
 (2) Create a job to execute all the transformations with condition checks and validations (e.g., check whether the file exists) **(2 points)**.
 
-(3) Discover different slowly changing dimension (SCD) types. **(2 points)**
+(3) Discover different slowly changing dimension (SCD) types. **(3 points)**
 
-In the "dimension lookup/update" step, you can set different SCD types to handle the future changes with different ways in the dimension tables. The default type of dimension update is "Insert", i.e., SCD type 2.  
+In the "dimension lookup/update" step, you can set different SCD types to handle the future changes with different ways in the dimension tables. Follow the steps to discover the differences between different SCD types. Suppose you have successfully loaded the customer_dim table in PostgreSQ and the default type of dimension update in PDI is "Insert", i.e., SCD type 2. 
 - Step 1: Open the customers.csv file;
-- Step 2: Find customer 146 Elia Fawcett and change her address from "8989 N Port Washington Rd" to "8990 S Port Washington Rd";
+- Step 2: Find the customer with customer_id of "146" and change her address from "8989 N Port Washington Rd" to "8990 S Port Washington Rd";
 - Step 3: Re-run the transformation, see what happens in the dimension table;
 - Step 4: Clear the customer_dim table, and restore the changes in the customers.csv file;
-- Step 5: Change the type of dimension update from "Insert" to "Punch through' (i.e., SCD type 1);
+- Step 5: Change the type of dimension update from "Insert" to "Punch through' (i.e., SCD type 1), and then load the customer_dim table into PostggreSQL;
 - Step 6: Repeat step 1 to step 3.
   
 Compare the different results of customer_dim table when using SCD type 1 and SCD type 2, and explain the use cases of those two types. 
@@ -91,28 +90,26 @@ https://en.wikipedia.org/wiki/Slowly_changing_dimension
 
 
 
-**2.OLAP Cube Generation**
+**2.OLAP Cube Generation (5 points)**
 
-Use Pentaho Schema Workbench to generate an OLAP cube based on the star schema created in the previous step. This cube should be created on two measures in the five dimension tables. You should create some hierarchies (e.g., year-month-day) on the dimensions. Finally, publish the cube into Pentaho server for further analysis. **(4 points)**
+Use Pentaho Schema Workbench to generate an OLAP cube based on the star schema created in the previous step. Finally, publish the created cube into Pentaho server for further analysis.
 
+**Requirments:** The cube name is *Order_Cube*. Please create 5 dimension usages for the five dimension tables. You need to reate some hierarchies (e.g., year-month-day) on each dimension.
 
 **3. OLAP Analysis and Results Reporting**
 
-(1) Use the Saiku Analytics tool to conduct the following two analyses using the OLAP cube created in the previous step. **(4 points)**
-
-
-(2) Then, create a report to visualize the two analyses results with charts (e.g., line chart, pie chart, and bar chart). **(2 points)**
+Use the Saiku Analytics tool to analyze *"the total dollars sold per year per parent_category"* using the OLAP cube created in the previous step. Create a report to visualize the results with charts (e.g., line chart, pie chart, and bar chart **(4 points)**
 
 
 
 
 
 ## **Submission Requirements**: 
-- Please upload all the files of ETL processing, OLAP cube generation, etc.
-- Please show the star schema figure and give 10 rows of each table. 
-- Please give all the results in a single PDF file.
-- Please compress all the files into a zip file.
-- Please submit to Moodle page and the deadline is **xxxx, 2023**.
+- Upload all the files of ETL processing and OLAP cube generation.
+- Show the star schema figure and give 10 rows of each table. 
+- Give all the results in a single PDF file.
+- Compress all the files into a zip file.
+- Submit to Moodle page and the deadline is **xxxx, 2023**.
 
 
 ## **Some Useful Links**
