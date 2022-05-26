@@ -74,7 +74,7 @@ In the date_dim table, please embellish the date dimension with the following da
 
 (3) Discover different slowly changing dimension (SCD) types. **(3 points)**
 
-In the "dimension lookup/update" step, you can set different SCD types to handle the future changes with different ways in the dimension tables. Follow the steps to discover the differences between different SCD types. Suppose you have successfully loaded the customer_dim table in PostgreSQ and the default type of dimension update in PDI is "Insert", i.e., SCD type 2. 
+In the "dimension lookup/update" step, you can set different SCD types to handle the future changes with different ways in the dimension tables. Follow the steps to discover the differences between different SCD types. Suppose you have successfully loaded the customer_dim table in PostgreSQ and the default type of dimension update in PDI is "Insert" (i.e., SCD type 2). 
 - Step 1: Open the customers.csv file;
 - Step 2: Find the customer with customer_id of "146" and change her address from "8989 N Port Washington Rd" to "8990 S Port Washington Rd";
 - Step 3: Re-run the transformation, see what happens in the dimension table;
